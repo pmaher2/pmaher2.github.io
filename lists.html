@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<link rel="stylesheet" href="css/styles.css">
+		<title>Learn Java</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<h1>Lists</h1>
+		<div id="container">
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="install.html">Install Eclipse</a></li>
+					<li><a href="tutorials.html">Learn</a></li>
+				</ul>
+			</nav>
+
+			<main>
+				<div id="text">
+					<h2>Introduction to lists</h2>
+					<p>Lists are often used to store large amounts of data in a form that can be accessed and used again later</p>
+					<p>Most lists are initialized in a way that is similar to normal variables but with a set of brackets immediately after the object type. Like variables, lists also must follow the standard naming rules</p>
+				
+					<p>Standard array lists have a fixed length that must be set when the array is initialized.</p>
+					<p>In the following example, an array of type int is initialized to a new int array.</p>
+					<article>
+						<ul>
+							<li><brn>int</brn>[] <yel>example</yel> = <brn>new int</brn>[5];</li>
+						</ul>
+					</article>
+				</div>
+				<div id="text">
+					<h2>Using toString()</h2>
+					<p>By default each value in this list will be set to 0. To print this to console as a readable string, use the predefined toString function:</p>
+					<article>
+						<ul>
+							<li><dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<dblue>Arrays</dblue>.<lgrn><i>toString</i></lgrn>(<tan>example</tan>));</li>
+						</ul>
+					</article>
+					<p>If the toString function is not used, the location of the int array will be printed to console rather than the values</p>
+					<p>The output should look like this:</p>
+					<article>
+						<ul>
+							<li>[0, 0, 0, 0, 0]</li>
+						</ul>
+					</article>
+					<p>To add values to the array:</p>
+					<article>
+						<ul>
+							<li><tan>example</tan>[2] = 5;</li>
+						</ul>
+					</article>
+					<p>This will print:</p>
+					<article>
+						<ul>
+							<li>[0, 0, 5, 0, 0,]</li>
+						</ul>
+					</article>
+					<p>to the console</p>
+				</div>
+				<div id="text">
+					<h2>Using .length()</h2>
+					<p>To get the length of any standard list in java, use the .length() function. This is a predefined function that returns the length of the list.</p>
+					<p>To do this, use the following code:</p>
+					<article>
+						<ul>
+							<li><dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<tan>example</tan>.<lgrn>length</lgrn>());</li>
+						</ul>
+					</article>
+					<p>This will print out the length to console</p>
+					<p>The .length() function is often used in loops to index through a list of values.</p>
+				</div>
+				<div id="text">
+					<h2>ArrayLists</h2>
+					<p>An ArrayList is a type of list in which the size can vary. Like normal lists, ArrayLists must have a specified object type when defined.</p>
+					<p>ArrayLists do not use <brn>int</brn> and <brn>double</brn> but rather use <pur>Integer</pur> and <pur>Double</pur>. This is because ArrayLists must be set to an Object rather than a primitive type. ArrayLists can have an object of type <brn>int</brn>[] or <brn>double</brn>[] since arrays are not primitive types.</p>
+					<p>Learn more about the difference between primitive types and objects <a href="https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/int-vs-Integer-java-difference-comparison-primitive-object-types#:~:text=The%20key%20difference%20between%20the,included%20in%20the%20Java%20API.">here</a>.</p>
+					<hr color="#7a7a7a"></hr>
+					<p>To initialize an ArrayList use the following syntax:</p>
+					<article>
+						<ul>
+							<li><dblue>ArrayList</dblue>&lt;<pur>Double</pur>&gt;   <llblue>ar</llblue> = <brn>new</brn> <lgrn>ArrayList</lgrn>&lt;<pur>Double</pur>&gt;();</li>
+						</ul>
+					</article>
+				</div>
+				<div id="text">
+					<h2>Using .size()</h2>
+					<p>To return the size of an ArrayList, invoke the .size() function on the array.</p>
+					<article>
+						<ul>
+							<li><dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<llblue>ar</llblue>.<lgrn>size</lgrn>());</li>
+						</ul>
+					</article>
+				</div>
+				<div id="text">
+					<h2>Adding values to an ArrayList</h2>
+					<p>Unlike normal lists, ArrayLists use the .add() function to add a value to the it.</p>
+					<article>
+						<ul>
+							<li><dblue>ArrayList</dblue>&lt;<pur>Double</pur>&gt;   <llblue>ar</llblue> = <brn>new</brn> <lgrn>ArrayList</lgrn>&lt;<pur>Double</pur>&gt;();</li>
+							<li><llblue>ar</llblue>.<lgrn>add</lgrn>(1.0);</li>
+							<li><llblue>ar</llblue>.<lgrn>add</lgrn>(1.5);</li>
+							<li><llblue>ar</llblue>.<lgrn>add</lgrn>(2.0);</li>
+						</ul>
+					</article>
+					<p>When printed to console the output will look like:</p>
+					<article>
+						<ul>
+							<li>[1.0, 1.5, 2.0]</li>
+						</ul>
+					</article>
+				</div>
+				
+				<div id="text">
+					<h2>Setting values in an ArrayList</h2>
+					<p>Similarly to standard lists, ArrayLists use an index to set the value at a location in the list. With ArrayLists the .set() function is used.</p>
+					<hr color="#7a7a7a"></hr>
+					<p>The .set() function accepts two parameters. The first parameter is the index and the second parameter is the element to add to the ArrayList.</p>
+					<p>Example:</p>
+					<article>
+						<ul>
+							<li><dblue>ArrayList</dblue>&lt;<pur>String</pur>&gt;   <llblue>ar</llblue> = <brn>new</brn> <lgrn>ArrayList</lgrn>&lt;<pur>String</pur>&gt;();</li>
+							<li><llblue>ar</llblue>.<lgrn>add</lgrn>(<tur>"fruit 1"</tur>);</li>
+							<li><llblue>ar</llblue>.<lgrn>add</lgrn>(<tur>"fruit 2"</tur>);</li>
+							<li><llblue>ar</llblue>.<lgrn>add</lgrn>(<tur>"fruit 3"</tur>);</li>
+						</ul>
+					</article>
+					<p>Output:</p>
+					<article>
+						<ul>
+							<li>[fruit 1, fruit 2, fruit 3]</li>
+						</ul>
+					</article>
+					<p>To change the values of the list use the .set() function:</p>
+					<article>
+						<ul>
+							<li><llblue>ar</llblue>.<lgrn>set</lgrn>(0, <tur>"apple"</tur>);</li>
+							<li><llblue>ar</llblue>.<lgrn>set</lgrn>(1, <tur>"orange"</tur>);</li>
+							<li><llblue>ar</llblue>.<lgrn>set</lgrn>(2, <tur>"banana"</tur>);</li>
+						</ul>
+					</article>
+					<p>Once printed to console the output will look like:</p>
+					<article>
+						<ul>
+							<li>[apple, orange, banana]</li>
+						</ul>
+					</article>
+					
+			</main>
+	
+			<footer>
+				&copy;2023 Patrick Maher
+			</footer>
+		</div>
+	</body>
+</html>

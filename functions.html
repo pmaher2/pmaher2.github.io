@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<link rel="stylesheet" href="css/styles.css">
+		<title>Learn Java</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<h1>Intro to Functions</h1>
+	<body>
+		<div id="container">
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="install.html">Install Eclipse</a></li>
+					<li><a href="tutorials.html">Learn</a></li>
+				</ul>
+			</nav>
+		
+			<main>
+				<div id="text">
+					<h2>Functions</h2>
+					<p>Functions are essential when creating a program. They can be used to execute code when data is given.</p>
+					<p> One of the most basic functions is the <dgrn>main</dgrn> function:</p>
+					<article>
+						<ul>
+							<li><brn>public static void</brn> <dgrn>main</dgrn>(<dblue>String</dblue>[] <lblue>args</lblue>)</li>
+							<li>{</li>
+							<li>&nbsp;</li>
+							<li>}</li>
+						</ul>
+					</article>
+					<p> This is the standard format for the main function inside a java class and is used to run other functions. </p>
+				</div>
+				
+				<div id="text">
+					<p>We can add custom functions or other lines of code inside of this to run them.</p>
+					
+					<article>
+						<ul>
+							<li><brn>public static void</brn> <dgrn>main</dgrn>(<dblue>String</dblue>[] <lblue>args</lblue>)</li>
+							<li>{</li>
+							<li>&nbsp;<dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<tur>"Hello World!"</tur>);</li>
+							<li>}</li>
+						</ul>
+					</article>
+					<p>The line of code added above will print the following to the console: <article>&nbsp;Hello World!</article></p>
+					<p>When possible, you should put code inside of functions other than the main function to stay organized. This is one of many concepts used in <a href="https://www.w3schools.com/java/java_oop.asp">Object Oriented Programming</a>.</p>
+					<p><i> Note: Functions should be declared outside of the main function but invoked inside of the main function.</i></p>
+				</div>
+				
+				<div id="text">
+					<h2>What can be done with functions?</h2>
+					<p>Functions can be called inside of other functions. For example:</p>
+					<article>
+						<ul>
+							<li><brn>public static void</brn> <dgrn>doSomething</dgrn>()</li>
+							<li>{ </li>
+							<li>&nbsp; <lgrn>otherFunction</lgrn>();</li>
+							<li>&nbsp; <lgrn>anotherFunction</lgrn>();</li>
+							<li>&nbsp; ...</li>
+							<li>} </li>
+						</ul>
+					</article>
+					<p>A function that does not have a return value is known as a void function.</p>
+					
+					<p>Additionally, functions can have return values which can return a value from a mathematical operation or a location in memory. The most common forms of return functions are:</p>
+					<ul>
+						<li>boolean which returns true or false</li>
+						<li>integer which returns a whole number</li>
+						<li>double which returns a float (number with decimal)</li>
+					</ul>
+					
+					
+					<article>
+						<ul>
+							<li></li>
+							<li><brn>public static int</brn> <dgrn>getAverage</dgrn>()</li>
+							<li>{ </li>
+							<li>&nbsp; <brn>return</brn> (1+2+3)/3;</li>
+							<li></li>
+							<li>} </li>
+						</ul>
+					</article>
+				</div>
+			</main>
+	
+			<footer>
+				&copy;2023 Patrick Maher
+			</footer>
+		</div>
+	</body>
+</html>

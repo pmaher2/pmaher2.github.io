@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<link rel="stylesheet" href="css/styles.css">
+		<title>Learn Java</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<h1>Variables</h1>
+		<div id="container">
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="install.html">Install Eclipse</a></li>
+					<li><a href="tutorials.html">Learn</a></li>
+				</ul>
+			</nav>
+
+			<main>
+				<div id="text">
+					<h2>Common Variable Types</h2>
+					<p>The most commonly used variable types in java are:</p>
+					<ul>
+						<li>a boolean which can be set to true or false</li>
+						<li>an integer which can be set to any whole number</li>
+						<li>a double which can be set to any decimal value</li>
+						<li>a string which contains text</li>
+						<li>a char which stores a single character</li>
+					</ul>
+					<p>Variable names have a few requirements to be valid:<p>
+					<ul>
+						<li>The first character must be either a letter, dollar sign, or underscore.</li>
+						<li>Cannot be a keyword or reserved word such as class, if, for, null, void, etc.</li>
+						<li>A variable cannot have the same name as one already defined</li>
+					</ul>
+					<p>In addition to this, variable names should be short but descriptive. However, this is not a requirement.</p>
+					<h3>To create a variable:</h3>
+					<article>
+						<ul>
+							<li><brn>boolean</brn> <yel>example1</yel> = <brn>true</brn>;</li>
+							<li><brn>int</brn> <yel>example2</yel> = <dblue>4</dblue>;</li>
+							<li><brn>double</brn> <yel>example3</yel> = <dblue>3.14</dblue>;</li>
+						</ul>
+					</article>
+					<h3>Strings</h3>
+					<p>Strings are a type of variable that can store text. Strings can contain numbers but they are still treated as text rather than a numerical value.</p>
+					<p>All strings must start and end with quotation marks</p>
+					<p>The following examples are valid strings:</p>
+					<article>
+						<ul>
+							<li><dblue>String</dblue> <yel>text</yel> = <tur> "This is a String"</tur>;</li>
+							<li><dblue>String</dblue> <yel>text2</yel> = <tur> "This is also String"</tur>;</li>
+							<li><dblue>String</dblue> <yel>text3</yel> = <tur> "Hello 123"</tur>;</li>
+						</ul>
+					</article>
+					<h3>Concatenation</h3>
+					<p>Concatenation is when strings are combined to form another string</p>
+					<article>
+						<ul>
+							<li><dblue>String</dblue> <yel>firstName</yel> = <tur> "Patrick "</tur>;</li>
+							<li><dblue>String</dblue> <yel>lastName</yel> = <tur> "Maher"</tur>;</li>
+							<li><dblue>String</dblue> <yel>fullName</yel> = <yel>firstName</yel> + <yel>lastName</yel>;</li>
+							<li><dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<yel>fullName</yel>);</li>
+						</ul>
+					</article>
+					<p>The resulting string is printed to the console:</p>
+					<article>
+						<ul>
+							<li>Patrick Maher</li>
+						</ul>
+					</article>
+					<h3>Escape Sequence Characters</h3>
+					<p><a href="https://docs.oracle.com/javase/tutorial/java/data/characters.html">Escape characters</a> can be used to insert tabs, move text to the next line and more.</p>
+					<table style="width:100%">
+						<tr>
+							<th>Escape Sequence</th>
+							<th>Description</th>
+						</tr>
+						<tr>
+							<td>\t</td>
+							<td>tab</td>
+						</tr>
+						<tr>
+							<td>\b</td>
+							<td>backspace</td>
+						</tr>
+						<tr>
+							<td>\n</td>
+							<td>new line
+						</tr>
+						<tr>
+							<td>\r</td>
+							<td>carriage return</td>
+						</tr>
+						<tr>
+							<td>\f</td>
+							<td>form feed</td>
+						</tr>
+						<tr>
+							<td>\'</td>
+							<td>apostrophe</td>
+						</tr>
+						<tr>
+							<td>\"</td>
+							<td>quotation mark</td>
+						</tr>
+						<tr>
+							<td>\\</td>
+							<td>backslash</td>
+						</tr>
+					</table>
+					<p>For example:</p>
+					<article>
+						<ul>
+							<li><dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<tur>"Hello"</tur> + <tur>\nWorld!</tur>);</li>
+						</ul>
+					</article>
+					<p>The resulting output:</p>
+					<article>
+						<ul>
+							<li>Hello</li>
+							<li>World!</li>
+						</ul>
+					</article>
+					<p>Using <b>\t</b> instead:
+					<article>
+						<ul>
+							<li><dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<tur>"Hello"</tur> + <tur>\tWorld!</tur>);</li>
+						</ul>
+					</article>
+					<p>Would print the following:</p>
+					<article>
+						<ul>
+							<li>Hello&nbsp;&nbsp;&nbsp;&nbsp;World!</li>
+						</ul>
+					</article>
+					<h2>Boolean values</h2>
+					<p>Boolean values are often used in logical expressions to compare multiple values.</p>
+					<p>Boolean values are also used in <b>if statements</b> to determine whether or not an action should be performed.</p>
+					<article>
+						<ul>
+							<li><brn>boolean</brn> <yel>A</yel> = <brn>true</brn>;</li>
+							<li><brn>boolean</brn> <yel>B</yel> = <brn>false</brn>;</li>
+							<li><dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<yel>A</yel> && <yel>B</yel>);</li>
+						</ul>
+					</article>
+					<p>In the example above, A is true, B is false, and they are being compared using the <brn>and</brn> operator.</p>
+					<p>Since we are comparing true and false, false will be printed to the console</p>
+					<p>If we used <brn>or</brn> instead, <brn>true</brn> would be printed.</p>
+					<p>For more info on comparing boolean values, visit <a href="http://ntci.on.ca/compsci/java/ch3/106.JPG">this link</a></p>
+					<h2>Integers and Doubles</h2>
+					<p>Integers are useful for programs that utilize whole numbers</p>
+					<p>For example, if we want to make a program that sets a variable to the amount of students in classroom we would use integers and not doubles<p>
+					<p>Doubles should be used when we are dealing with data that can be a fractional part.</p>
+					
+					<p>Examples of data that use a <brn>double</brn> variable:</p>
+					<ul>
+						<li>Money</li>
+						<li>Test grades</li>
+						<li>Fractions</li>
+					</ul>
+					<p>Examples of data that use an <brn>integer</brn> variable:</p>
+					<ul>
+						<li>Number of students in a class</li>
+						<li>Cars in a parking lot</li>
+						<li>Population of a city</li>
+					</ul>
+					<h4>Casting</h4>
+					<p>A <brn>double</brn> always has a decimal point in it, but it can be initialized to a whole number. If this happens, Eclipse will automatically cast the whole number to type <brn>double</brn>.</p>
+					<article>
+						<ul>
+							<li><brn>int</brn> <yel>num</yel> = <dblue>0</dblue>;</li>
+							<li><dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<yel>num</yel>);</li>
+						</ul>
+					</article>
+					<p>The number <dblue>0</dblue> is cast from <brn>int</brn> to <brn>double</brn> when initialized, resulting in the following output to console:
+					<article>
+						<ul>
+							<li>0.0</li>
+						</ul>
+					</article>
+					<p>An <brn>integer</brn> can <i>only</i> be set to whole numbers. Eclipse will not cast doubles to integers automatically.</p>
+					<p>Despite this, doubles can still be cast to integers but you must specifiy this</p>
+					<p>To cast from type <brn>int</brn> to type <brn>double</brn> we can use the following syntax:</p>
+					<article>
+						<ul>
+							<li><brn>double</brn> <yel>num1</yel> = <dblue>4.8</dblue>;</li>
+							<li><brn>int</brn> <yel>num2</yel> = (<brn>int</brn>) <yel>num1</yel>;</li>
+						</ul>
+					</article>
+					<p>Doubles and integers are not the only objects in java that can be cast to another object.</p>
+					<p>For more information on casting, visit <a href="https://www.w3schools.com/java/java_type_casting.asp">this link</a></p>
+				</div>
+			</main>
+	
+			<footer>
+				&copy;2023 Patrick Maher
+			</footer>
+		</div>
+	</body>
+</html>

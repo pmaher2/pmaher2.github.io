@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<link rel="stylesheet" href="css/styles.css">
+		<title>Learn Java</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<h1>Conditional Statements</h1>
+		<div id="container">
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="install.html">Install Eclipse</a></li>
+					<li><a href="tutorials.html">Learn</a></li>
+				</ul>
+			</nav>
+
+			<main>
+				<div id="text">
+					<h2>Conditional Statements</h2>
+					<p>A conditional statement is a piece of code that is only ran if a certain condition is met.</p>
+					<h3>If statements</h3>
+					<p>If statements are a type of conditional statement in which numbers, booleans, or other objects can be compared against each other or against another value.<p>
+					<p>To compare two booleans:
+					<article>
+						<ul>
+							<li><brn>boolean</brn> <yel>var1</yel> = <brn>true</brn>;</li>
+							<li><brn>boolean</brn> <yel>var2</yel> = <brn>false</brn>;</li>
+							<li><brn>if</brn>(<yel>var1</yel> == <yel>var2</yel>)</li>
+							<li>&nbsp;&nbsp;&nbsp;<dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<tur>"equal"</tur>);</li>
+							<li><brn>if</brn>(<yel>var1</yel> != <yel>var2</yel>)
+							<li>&nbsp;&nbsp;&nbsp;<dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<tur>"not equal"</tur>);</li>
+						</ul>
+					</article>
+					<p>In the first <brn>if</brn> statement <yel>var1</yel> is being compared to <yel>var2</yel> to test if they are equal. Since <yel>var1</yel> is <brn>true</brn> and  <yel>var2</yel> is <brn>false</brn> meaning they are not equal, this statement is ignored and we move on to the next line.</p>
+					<p>The next line is another <brn>if</brn> statement. Both variables are being tested to see if they are not equal. The variables are not equal to each other which results in the statement being <brn>true</brn> and therefore it is printed to the console:</p>
+					<article>
+						<ul>
+							<li>not equal</li>
+						</ul>
+					</article>
+					<h3>Else statements</h3>
+					<p>Else statements are similar in function to if statements except they are only executed if the first if statement is false.</p>
+					<p>For example:</p>
+					<article>
+						<ul>
+							<li><brn>int</brn> <yel>num</yel> = <dblue>0</dblue>;</li>
+							<li><brn>if</brn>(<yel>num</yel> &lt <dblue>0</dblue>)</li>
+							<li>&nbsp;&nbsp;&nbsp;<dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<tur>"Number is negative"</tur>);
+							<li><brn>else</brn></li>
+							<li>&nbsp;&nbsp;&nbsp;<dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<tur>"Number is positive"</tur>);
+						</ul>
+					</article>
+					<p>Would print the following to console:</p>
+					<article>
+						<ul>
+							<li>Number is positive</li>
+						</ul>
+					</article>
+					<p>In some cases <brn>else</brn> should be used instead of two <brn>if</brn> statements.</p> <p>If both <brn>if</brn> statements are true both conditions could be met, resulting in two actions being performed. To avoid this use an <brn>else</brn> statement so only one action is performed.</p>
+					<h3> Else if statements</h3>
+					<p>In some situations <brn>else if</brn> statements are ideal.</p>
+					<p>In the code below, assume <yel>grade</yel> has been initialized</p>
+					<article>
+						<ul>
+							<li><brn>double</brn> <yel>grade</yel>;</li>
+							<li><brn>if</brn>(<yel>grade</yel> >= <dblue>90</dblue>)</li>
+							<li>&nbsp;&nbsp;&nbsp;<dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<tur>"letter grade is A"</tur>);
+							<li><brn>else if</brn>(<yel>grade</yel> >= <dblue>80</dblue>)</li>
+							<li>&nbsp;&nbsp;&nbsp;<dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<tur>"letter grade is B"</tur>);
+							<li><brn>else if</brn>(<yel>grade</yel> >= <dblue>70</dblue>)</li>
+							<li>&nbsp;&nbsp;&nbsp;<dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<tur>"letter grade is C"</tur>);
+							<li><brn>else if</brn>(<yel>grade</yel> >= <dblue>60</dblue>)</li>
+							<li>&nbsp;&nbsp;&nbsp;<dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<tur>"letter grade is D"</tur>);
+							<li><brn>else</brn></li>
+							<li>&nbsp;&nbsp;&nbsp;<dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<tur>"letter grade is E"</tur>);
+						</ul>
+					</article>
+					<p>The first statement in the code above has to be an <brn>if</brn> statement.</p>
+					<p>The last statement is an <brn>else</brn> statement because it can only come directly after an <brn>if</brn> or an <brn>else if</brn> statement.<p>
+					<p>If the code were to have all of the statements as <brn>if</brn> statements instead of <brn>else if</brn> statements, the code would print out messages saying the grade is multiple letters instead of just one</p>
+				</div>
+			</main>
+	
+			<footer>
+				&copy;2023 Patrick Maher
+			</footer>
+		</div>
+	</body>
+</html>

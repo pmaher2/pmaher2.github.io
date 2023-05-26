@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<link rel="stylesheet" href="css/styles.css">
+		<title>Learn Java</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<h1>Loops</h1>
+		<div id="container">
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="install.html">Install Eclipse</a></li>
+					<li><a href="tutorials.html">Learn</a></li>
+				</ul>
+			</nav>
+
+			<main>
+				<div id="text">
+					<h2>For loops</h2>
+					<p>For loops are one of the most commonly used loops in Java.</p>
+					<article>
+						<ul>
+							<li><brn>for</brn>(<brn>int</brn> <yel>i</yel> = 0; <tan>i</tan> &lt 5; <tan>i</tan>++)</li>
+							<li>&nbsp;&nbsp;&nbsp;<dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>println</lgrn>(<tan>i</tan>);</li>
+						</ul>
+					</article>
+					<p>The loop above iterates as long as <tan>i</tan> is less than 5 and prints each number to the console.</p> <p>This loop would output the following:</p>
+					<article>
+						<ul>
+							<li>0<li>
+							<li>1<li>
+							<li>2<li>
+							<li>3<li>
+							<li>4<li>
+						</ul>
+					</article>
+					<p></p>
+					<hr color="#7a7a7a"></hr>
+					<h3>Nested For loops</h3>
+					<p>Nested for loops are created with more than one loop under a for loop</p>
+					<p>Example:</p>
+					<article>
+						<ul>
+							<li><brn>for</brn>(<brn>int</brn> <yel>i</yel> = 0; <tan>i</tan> &lt 2; <tan>i</tan>++)</li>
+							<li>{</li>
+							<li>&nbsp;&nbsp;&nbsp;<brn>for</brn>(<brn>int</brn> <yel>j</yel> = 0; <tan>j</tan> &lt 5; <tan>j</tan>++)</li>
+							<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>print</lgrn>(<tan>j</tan> + (<tan>i</tan> * 5) + <tur>" "</tur>);</li>
+							<li>&nbsp;&nbsp;&nbsp;<dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>print</lgrn>(<tur>"\n"</tur>);</li>
+							<li>}</li>
+						</ul>
+					</article>
+					<p>Would result in:</p>
+					<article>
+						<ul>
+							<li>0 1 2 3 4 </li>
+							<li>5 6 7 8 9 </li>
+						</ul>
+					</article>
+					<p>Once the inner loop is done printing values, it moves down to the next line and prints a new line character. After this, the outer loop is still running and therefore continues to run the inner loop until it is done printing.</p>
+					<p>This is much more efficient than manually typing out the numbers especially when printing a large amount of numbers</p>
+					<p>Nested for loops are used in almost all programs. In the example above, the <lgrn>print</lgrn> statement can be replaced with a function</p>
+					<hr color="#7a7a7a"></hr>
+					<h3>While loops</h3>
+					<p>In java and many other programs there are <brn>while</brn> loops. These loops are similar to for loops in structure, but while loops use a conditional statement instead of a variable that increments every iteration.</p>
+					<article>
+						<ul>
+							<li><brn>boolean</brn> <yel>condition</yel> = <brn>true</brn></li>
+							<li><brn>while</brn>(<tan>condition</tan>)<li>
+							<li>&nbsp;&nbsp;&nbsp;<dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>print</lgrn>(<tur>"true"</tur>);</li>
+						</ul>
+					</article>
+					<p>Since the conditional statement in the <brn>while</brn> loop is always true, the code will run forever. This is known as an infinite loop</p>
+					<p>While loops and for loops can be interchangeable in most situations, however there are exclusive situations where this does not apply.</p>
+					<hr color="#7a7a7a"></hr>
+					<h2>For each loops</h2>
+					<p>For each loops are loops in which a temporary variable or object is set to a value in a list of values with the same type.</p>
+					
+					<p>This is especially useful when using an <a href="https://www.w3schools.com/java/java_arraylist.asp">ArrayList</a> that does not have a predefined length</p>
+					<article>
+						<ul>
+							<li><dblue>ArrayList</dblue>&lt;<pur>Integer</pur>&gt;   <llblue>ar</llblue> = <brn>new</brn> <lgrn>ArrayList</lgrn>&lt;<pur>Integer</pur>&gt;</li>
+							<li><com>//this adds 57, 23, 30, 72, and 61 to the list</com></li>
+							<li><llblue>ar</llblue>.<lgrn>add</lgrn>(<dblue>57</dblue>);</li>
+							<li><llblue>ar</llblue>.<lgrn>add</lgrn>(<dblue>23</dblue>);</li>
+							<li><llblue>ar</llblue>.<lgrn>add</lgrn>(<dblue>30</dblue>);</li>
+							<li><llblue>ar</llblue>.<lgrn>add</lgrn>(<dblue>72</dblue>);</li>
+							<li><llblue>ar</llblue>.<lgrn>add</lgrn>(<dblue>61</dblue>);</li>
+							<li><brn>for</brn>(<brn>int</brn> <yel>temp</yel> : <llblue>ar</llblue>)</li>
+							<li>{</li>
+							<li>&nbsp;&nbsp;&nbsp;<brn>if</brn>(<tan>temp</tan> &lt 50)</li>
+							<li>&nbsp;&nbsp;&nbsp;{</li>
+							<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>print</lgrn>(<tan>temp</tan> + <tur>" has been removed"</tur>);</li>
+							<li>&nbsp;&nbsp;&nbsp;}</li>
+							<li>&nbsp;&nbsp;&nbsp;<brn>else</brn></li>
+							<li>&nbsp;&nbsp;&nbsp;{</li>
+							<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<dblue>System</dblue>.<llblue><b><i>out</i></b></llblue>.<lgrn>print</lgrn>(<tan>temp</tan>);</li>
+							<li>&nbsp;&nbsp;&nbsp;}</li>
+							<li>}</li>
+							
+							
+						<ul>
+					</article>
+					<p>This code would print out the following to console:</p>
+					<article>
+						<ul>
+							<li>57</li>
+							<li>23</li>
+							<li>30</li>
+							<li>72</li>
+							<li>61</li>
+						</ul>
+					</article>
+					<p>For each loops can also be used with predefined arrays of any type, but are mostly used with ArrayLists.</p>
+				</div>
+			</main>
+	
+			<footer>
+				&copy;2023 Patrick Maher
+			</footer>
+		</div>
+	</body>
+</html>
